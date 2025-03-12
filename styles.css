@@ -1,0 +1,17 @@
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea {
+  width: 50%;
+}
+
+#preview {
+  width: 50%;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid black;
+}
