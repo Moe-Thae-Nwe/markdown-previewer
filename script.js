@@ -21,6 +21,7 @@ marked.use({
   gfm: true,
   breaks: true
 })
+
 function App() {
   const [text, setText] = React.useState(marked.parse(placeholderText))
   function handleChange(event) {
@@ -28,11 +29,12 @@ function App() {
     setText(inputValue)
     console.log(text)
   }
+  
   return(
-    <>
+    <div>
       <textarea id = "editor" onChange = {handleChange}>{placeholderText}</textarea>
       <div id = "preview" dangerouslySetInnerHTML = {{__html: text}}></div>
-   </>
+   </div>
   )
 }
 
