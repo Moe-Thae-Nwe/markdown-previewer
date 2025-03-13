@@ -30,8 +30,14 @@ function App() {
     console.log(text);
   }
 
+  const container = {
+    width: 100%,
+    display: 'flex',
+    justifyContent: 'spaceBetween'
+}
+  
   return (
-    <div>
+    <div style = "container">
       <textarea id="editor" onChange={handleChange}>{placeholderText}</textarea>
       <div id="preview" dangerouslySetInnerHTML={{ __html: text }}></div>
     </div>
