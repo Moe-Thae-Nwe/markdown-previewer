@@ -31,10 +31,10 @@ function App() {
   }
 
   return (
-    <div style = "container">
+    <>
       <textarea id="editor" onChange={handleChange}>{placeholderText}</textarea>
       <div id="preview" dangerouslySetInnerHTML={{ __html: text }}></div>
-    </div>
+    </>
   );
 }
 
