@@ -1,26 +1,7 @@
-try {
-  import React from "https://esm.sh/react";
-} catch (e) {
-  console.error("Error importing React:", e);
-}
-
-try {
-  import ReactDOM from "https://esm.sh/react-dom/client";
-} catch (e) {
-  console.error("Error importing ReactDOM:", e);
-}
-
-try {
-  import { marked } from "https://esm.sh/marked";
-} catch (e) {
-  console.error("Error importing marked:", e);
-}
-
-try {
-  import DOMPurify from "https://esm.sh/dompurify";
-} catch (e) {
-  console.error("Error importing DOMPurify:", e);
-}
+import React from "https://unpkg.com/react@17/umd/react.production.min.js"
+import ReactDOM from "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+import {marked} from "https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+import DOMPurify from "https://cdn.jsdelivr.net/npm/dompurify@2.2.6/dist/purify.min.js"
 
 let placeholderText = `# Header 
 
