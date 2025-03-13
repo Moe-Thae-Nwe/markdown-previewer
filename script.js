@@ -30,12 +30,6 @@ function App() {
     console.log(text);
   }
 
-  const container = {
-    width: 100%,
-    display: 'flex',
-    justifyContent: 'spaceBetween'
-}
-  
   return (
     <div style = "container">
       <textarea id="editor" onChange={handleChange}>{placeholderText}</textarea>
