@@ -1,7 +1,26 @@
-import React from "https://esm.sh/react";
-import ReactDOM from "https://esm.sh/react-dom/client";
-import { marked } from "https://esm.sh/marked";
-import DOMPurify from "https://esm.sh/dompurify";
+try {
+  import React from "https://esm.sh/react";
+} catch (e) {
+  console.error("Error importing React:", e);
+}
+
+try {
+  import ReactDOM from "https://esm.sh/react-dom/client";
+} catch (e) {
+  console.error("Error importing ReactDOM:", e);
+}
+
+try {
+  import { marked } from "https://esm.sh/marked";
+} catch (e) {
+  console.error("Error importing marked:", e);
+}
+
+try {
+  import DOMPurify from "https://esm.sh/dompurify";
+} catch (e) {
+  console.error("Error importing DOMPurify:", e);
+}
 
 let placeholderText = `# Header 
 
@@ -23,9 +42,9 @@ marked.use({
 })
 
 function App() {
-  const [text, setText] = React.useState(marked.parse(placeholderText))
+  const [text, setText] = React.useState(DOMPurify.sanitize(marked.parse(placeholderText)))
   function handleChange(event) {
-    let inputValue = marked.parse(event.target.value)
+    let inputValue = DOMPurify.sanitize(marked.parse(event.target.value))
     setText(inputValue)
     console.log(text)
   }
